@@ -1,0 +1,30 @@
+:root {
+    --color-primary-dark: rgb(201, 0, 0);
+    --color-primary-light: rgb(241, 85, 85);
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    height: 100vh;
+    background-image: linear-gradient(to right bottom, rgba(241, 85, 85, 0.8),rgba(201, 0, 0, 0.8));
+    background-size: cover;
+	background-repeat: none;
+	text-align: center;
+}
+
+.App {
+	display: flex;
+	flex-direction: column;
+}
+
+.subheader {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.divider {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}

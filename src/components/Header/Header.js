@@ -1,57 +1,22 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'
-import TokenService from '../../services/token-service'
-import UserContext from '../../contexts/UserContext'
 import './Header.css'
 
-class Header extends Component {
-  static contextType = UserContext
-
-  handleLogoutClick = () => {
-    this.context.processLogout()
-  }
-
-  renderLogoutLink() {
-    return (
-      <div>
-        <span>
-          {this.context.user.name}
-        </span>
-        <nav>
-          <Link
-            onClick={this.handleLogoutClick}
-            to='/login'>
-            Logout
+export default function Header() {
+  return (
+    <header>
+      <img
+        src='https://eu4.paradoxwikis.com/images/thumb/4/4e/Roman_Empire.png/330px-Roman_Empire.png'
+        alt='Flag of the Roman Republic'
+        height='100px'
+        width='auto'
+      />
+      <h1>
+        <Link className='spaceRep-title' to='/'>
+          Spaced Repetition
           </Link>
-        </nav>
-      </div>
-    )
-  }
-
-  renderLoginLink() {
-    return (
-      <nav>
-        <Link to='/login'>Login</Link>
-        {' '}
-        <Link to='/register'>Sign up</Link>
-      </nav>
-    )
-  }
-
-  render() {
-    return (
-      <header>
-        <h1>
-          <Link to='/'>
-            Spaced repetition
-          </Link>
-        </h1>
-        {TokenService.hasAuthToken()
-          ? this.renderLogoutLink()
-          : this.renderLoginLink()}
-      </header>
-    );
-  }
+      </h1>
+      <div /> {/* place-holder for flexbox */}
+    </header>
+  );
 }
-
-export default Header

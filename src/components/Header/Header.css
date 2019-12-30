@@ -1,0 +1,17 @@
+header {
+	display: flex;
+	justify-content: space-evenly;
+}
+
+img {
+	padding: 6px;
+}
+
+.spaceRep-title {
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.spaceRep-title:hover {
+	color: yellow;
+}
