@@ -1,0 +1,9 @@
+.word {
+	border: solid 2px var(--color-border);
+	border-radius: 6px;
+	width: 40%;
+	min-width: 280px;
+	margin: 10px auto;
+	padding: 0 0 18px;
+	box-shadow: 3px 3px var(--color-border);
+}

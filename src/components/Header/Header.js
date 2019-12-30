@@ -13,9 +13,9 @@ export default class Header extends React.Component {
 
   renderLogoutLink() {
     return (
-      <div>
+      <div className='navbar'>
         <span>
-          {this.context.user.name}
+          Welcome, {this.context.user.name}!
         </span>
         <nav>
           <Link
@@ -31,11 +31,11 @@ export default class Header extends React.Component {
 
   renderLoginLink() {
     return (
-      <div>
+      <nav>
         <Link className='navblock' to='/login'>Login</Link>
         {' '}
         <Link className='navblock' to='/register'>Sign up</Link>
-      </div>
+      </nav>
     )
   }
 
@@ -54,14 +54,9 @@ export default class Header extends React.Component {
           </h1>
           <div /> {/* place-holder for flexbox */}
         </div>
-
-        <nav>
-          {TokenService.hasAuthToken()
-            ? this.renderLogoutLink()
-            : this.renderLoginLink()}
-        </nav>
-
-
+        {TokenService.hasAuthToken()
+          ? this.renderLogoutLink()
+          : this.renderLoginLink()}
       </header>
     );
   }

@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import LanguageContext from '../../contexts/LanguageContext'
 import DashboardApiService from '../../services/dashboard-api-service'
 
-import Button from '../../components/Button/Button'
 import Dashboard from '../../components/Dashboard/Dashboard'
 
 export default class DashboardRoute extends Component {
@@ -31,15 +30,10 @@ export default class DashboardRoute extends Component {
       words: this.state.words
     }
 
-    console.log(this.state.words)
-
     return (
       <LanguageContext.Provider value={value}>
-        <h2>{this.state.language.name}</h2>
         <section className='container'>
-          <Button className='btn'>
-            Start Practicing
-          </Button>
+        <h2>{this.state.language.name}</h2>
           <Dashboard />
         </section>
       </LanguageContext.Provider>

@@ -2,12 +2,14 @@ header {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-evenly;
+	margin: 2% 0;
 }
 
 h1 {
 	text-transform: uppercase;
 	letter-spacing: 1px;
 	font-family: 'Merriweather', serif;
+	margin: auto 0;
 }
 
 .headerTop {
@@ -32,13 +34,17 @@ img {
 }
 
 .spaceRep-title:hover {
-	color: yellow;
+	color: gold;
 }
 
 nav {
 	display: flex;
-	flex-direction: column;
-	justify-content: space-evenly;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.navbar {
+	margin-top: 2%;
 }
 
 .navblock {

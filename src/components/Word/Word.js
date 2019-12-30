@@ -1,11 +1,16 @@
 import React from 'react'
 
+import './Word.css'
+
 export default function Word(props) {
+	const { word } = props;
+	
 	return (
-		<div className='word'>
-			<h3>{props.word.original} - {props.word.translation}</h3>
-	        <p>Correct Answer Count: {props.word.correct_count}</p>
-			<p>Incorrect Answer Count: {props.word.incorrect_count}</p>
-		</div>
+		<li className='word'>
+			<h4>{word.original}</h4>
+			<h5>{word.translation}</h5>
+				Correct answer count: {word.correct_count}<br/>
+				Incorrect answer count: {word.incorrect_count}
+		</li>
 	)
 }

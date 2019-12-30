@@ -1,0 +1,13 @@
+.wordList {
+	list-style: none;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	padding: 0;
+}
+
+.learn {
+	text-decoration: none;
+	color: black;
+}

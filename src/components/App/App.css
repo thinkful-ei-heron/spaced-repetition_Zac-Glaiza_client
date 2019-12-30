@@ -1,13 +1,21 @@
 :root {
-    --color-primary-dark: rgb(201, 0, 0);
-    --color-primary-light: rgb(241, 85, 85);
+	--color-primary-dark1: rgba(255, 48, 49, 1);
+	--color-primary-dark2: rgba(247, 202, 24, 1);
+	--color-primary-medium1: rgba(236, 100, 75, 1);
+	--color-primary-medium2: rgba(255, 246, 143, 1);
+	--color-primary-light1: rgba(255,217,217,1);
+	--color-primary-light2: rgba(254, 250, 212, 1);
+
+	--color-border: rgba(150, 40, 27, 1);
+
 }
+
 
 body {
     font-family: 'Roboto', sans-serif;
-    height: 100vh;
-    background-image: linear-gradient(to right bottom, rgba(241, 85, 85, 0.8),rgba(201, 0, 0, 0.8));
-    background-size: cover;
+    /* height: 100vh; */
+    background: linear-gradient(-90deg, var(--color-primary-medium1), var(--color-primary-medium2));
+    /* background-size: cover; */
 	background-repeat: none;
 	text-align: center;
 }
@@ -15,6 +23,7 @@ body {
 .App {
 	display: flex;
 	flex-direction: column;
+	background-repeat: none;
 }
 
 .subheader {
@@ -30,12 +39,12 @@ body {
 }
 
 .container {
-	border: 4px double gold;
-	border-radius: 5px;
-	box-shadow: 0 .8rem 1.5rem rgba(240, 255, 0, 0.5);
+	border: 8px double var(--color-border);
+	border-radius: 6px;
+	box-shadow: 0 .8rem 1.5rem var(--color-primary-dark2);
 	max-width: 90%;
 	margin: 0 auto;
-	padding: 40px;
+	padding: 15px;
 	background-color: lightgray;
 }
 
@@ -48,6 +57,7 @@ body {
 	padding: .5rem 1.5rem;
 	border: 2px solid lightgray;
 	border-radius: 5px;
+	text-decoration: none;
 }
 
 .btn:hover {
