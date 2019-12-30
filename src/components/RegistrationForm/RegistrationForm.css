@@ -1,3 +1,10 @@
 .have-account {
+    color: blue;
     cursor: pointer;
+}
+
+.have-account:hover {
+    color: yellow;
+    font-weight: 600;
+    text-shadow: 0 .0 1.25rem rgba(231, 26, 26, 0.8);
 }

@@ -1,6 +1,7 @@
 form {
 	border: 4px double gold;
 	border-radius: 5px;
+	box-shadow: 0 .8rem 1.5rem rgba(240, 255, 0, 0.5);
 	max-width: 90%;
 	margin: 0 auto;
 	padding: 40px;

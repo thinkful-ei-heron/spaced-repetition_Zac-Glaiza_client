@@ -33,7 +33,14 @@ body {
 	text-transform: uppercase;
 	font-family: 'Roboto', sans-serif;
 	font-size: 1rem;
-	font-weight: 600;
+	font-weight: 900;
 	cursor: pointer;
-	padding: .5rem 1rem;
+	padding: .5rem 1.5rem;
+	border: 2px solid lightgray;
+	border-radius: 5px;
+}
+
+.btn:hover {
+	color: red;
+	box-shadow: 0 .626rem 1.25rem rgba(230, 107, 107, 0.5);
 }
