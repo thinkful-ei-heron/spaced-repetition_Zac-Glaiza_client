@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { Route, Switch } from 'react-router-dom'
 import Header from '../Header/Header'
-import Nav from '../Nav/Nav'
 import PrivateRoute from '../PrivateRoute/PrivateRoute'
 import PublicOnlyRoute from '../PublicOnlyRoute/PublicOnlyRoute'
 import RegistrationRoute from '../../routes/RegistrationRoute/RegistrationRoute'
@@ -24,37 +23,33 @@ export default class App extends Component {
     return (
       <div className='App'>
         <Header />
-        <div className='divider'>
-          <Nav />
-          <main>
-            {hasError && (
-              <p>There was an error! Oh no!</p>
-            )}
-            <Switch>
-              <PrivateRoute
-                exact
-                path={'/'}
-                component={DashboardRoute}
-              />
-              <PrivateRoute
-                path={'/learn'}
-                component={LearningRoute}
-              />
-              <PublicOnlyRoute
-                path={'/register'}
-                component={RegistrationRoute}
-              />
-              <PublicOnlyRoute
-                path={'/login'}
-                component={LoginRoute}
-              />
-              <Route
-                component={NotFoundRoute}
-              />
-            </Switch>
-          </main>
-        </div>
-
+        <main>
+          {hasError && (
+            <p>There was an error! Oh no!</p>
+          )}
+          <Switch>
+            <PrivateRoute
+              exact
+              path={'/'}
+              component={DashboardRoute}
+            />
+            <PrivateRoute
+              path={'/learn'}
+              component={LearningRoute}
+            />
+            <PublicOnlyRoute
+              path={'/register'}
+              component={RegistrationRoute}
+            />
+            <PublicOnlyRoute
+              path={'/login'}
+              component={LoginRoute}
+            />
+            <Route
+              component={NotFoundRoute}
+            />
+          </Switch>
+        </main>
       </div>
     );
   }

@@ -28,3 +28,12 @@ body {
 	flex-direction: row;
 	justify-content: center;
 }
+
+.btn {
+	text-transform: uppercase;
+	font-family: 'Roboto', sans-serif;
+	font-size: 1rem;
+	font-weight: 600;
+	cursor: pointer;
+	padding: .5rem 1rem;
+}
