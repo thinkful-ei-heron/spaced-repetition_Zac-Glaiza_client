@@ -43,14 +43,14 @@ export default class Header extends React.Component {
     return (
       <header>
         <div className='headerTop'>
-        <img
-          src='https://eu4.paradoxwikis.com/images/thumb/4/4e/Roman_Empire.png/330px-Roman_Empire.png'
-          alt='Flag of the Roman Republic'
-        />
+          <img
+            src='https://eu4.paradoxwikis.com/images/thumb/4/4e/Roman_Empire.png/330px-Roman_Empire.png'
+            alt='Flag of the Roman Republic'
+          />
           <h1>
             <Link className='spaceRep-title' to='/'>
               Spaced Repetition
-          </Link>
+            </Link>
           </h1>
           <div /> {/* place-holder for flexbox */}
         </div>
