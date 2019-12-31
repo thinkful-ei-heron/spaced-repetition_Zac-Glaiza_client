@@ -34,13 +34,10 @@ export default class DashboardRoute extends Component {
     return (
       <LanguageContext.Provider value={value}>
         <section className='container'>
-        <h2 className='language-name'>{this.state.language.name}</h2>
+          <h2 className='language-name'>{this.state.language.name}</h2>
           <Dashboard />
         </section>
       </LanguageContext.Provider>
-
-
-
     );
   }
 }
