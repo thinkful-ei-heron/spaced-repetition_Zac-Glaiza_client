@@ -12,29 +12,36 @@ h1 {
 	margin: auto 0;
 }
 
-.headerTop {
+/* .headerTop {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-evenly;
-}
+} */
 
 img {
 	padding: 6px;
 	border-radius: 50%;
 	height: 75px;
-	width: auto;
+	width: 75px;
+	opacity: 0.8;
 }
 
 .spaceRep-title {
-	color: black;
+	color: rgba(217, 30, 24, 3);
 	text-decoration: none;
 	cursor: pointer;
 	font-size: 2rem;
-	font-weight: 600;
+	font-weight: 900;
 }
 
 .spaceRep-title:hover {
-	color: gold;
+	text-transform: uppercase;
+	color: var(--color-primary-dark2);
+	text-shadow: 
+			3px 3px 0 #000,
+			0 .5rem .8rem var(--color-primary-dark1),
+			2px 2px 0 #000;
+	font-weight: 900;
 }
 
 nav {
@@ -49,10 +56,28 @@ nav {
 
 .navblock {
 	padding: 0 5%;
-	color: blue;
+	color: var(--color-primary-medium2);
+	text-shadow: -1px 0 var(--color-primary-medium1), 0 2px var(--color-primary-medium1), 2px 0 var(--color-primary-medium1), 0 -1px var(--color-primary-medium1);
+	text-decoration: none;
+	font-size: 1.2rem;
+	font-weight: 600;
+	text-transform: capitalize;
 }
 
 .navblock:hover {
 	text-transform: uppercase;
+	text-decoration: underline;
 	font-weight: 600;
+}
+
+.username {
+	text-transform: uppercase;
+}
+
+.welcome {
+	margin-bottom: 2%;
+}
+
+.space-title {
+	margin-bottom: 2%;
 }

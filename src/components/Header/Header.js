@@ -14,9 +14,9 @@ export default class Header extends React.Component {
   renderLogoutLink() {
     return (
       <div className='navbar'>
-        <span>
-          Welcome, {this.context.user.name}!
-        </span>
+        <div className='welcome'>
+          Welcome, <span className='username'>{this.context.user.name}!</span>
+        </div>
         <nav>
           <Link
             className='navblock'
@@ -32,7 +32,7 @@ export default class Header extends React.Component {
   renderLoginLink() {
     return (
       <nav>
-        <Link className='navblock' to='/login'>Login</Link>
+        <Link className='navblock' to='/login'>Log in</Link>
         {' '}
         <Link className='navblock' to='/register'>Sign up</Link>
       </nav>
@@ -43,11 +43,14 @@ export default class Header extends React.Component {
     return (
       <header>
         <div className='headerTop'>
-          <img
-            src='https://eu4.paradoxwikis.com/images/thumb/4/4e/Roman_Empire.png/330px-Roman_Empire.png'
-            alt='Flag of the Roman Republic'
-          />
-          <h1>
+        <Link className='spaceRep-title' to='/'>
+            <img
+              src='https://eu4.paradoxwikis.com/images/thumb/4/4e/Roman_Empire.png/330px-Roman_Empire.png'
+              alt='Flag of the Roman Republic'
+            />
+          </Link>
+          
+          <h1 className='space-title'>
             <Link className='spaceRep-title' to='/'>
               Spaced Repetition
             </Link>

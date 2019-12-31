@@ -28,7 +28,7 @@ describe(`User story: Login`, function() {
     cy.get('header nav').within($nav => {
       cy.get('a[href="/login"]')
         .should('be.visible')
-        .and('have.text', 'Login')
+        .and('have.text', 'Log in')
     })
 
     cy.get('main section').within($nav => {
@@ -54,7 +54,7 @@ describe(`User story: Login`, function() {
     cy.get('main section').within($section => {
       cy.get('h2').should(
         'have.text',
-        'Login',
+        'Log in',
       )
     })
   })
@@ -76,7 +76,7 @@ describe(`User story: Login`, function() {
         .and('have.attr', 'required', 'required')
 
       cy.get('button[type=submit]')
-        .should('have.text', 'Login')
+        .should('have.text', 'Log in')
     })
   })
 

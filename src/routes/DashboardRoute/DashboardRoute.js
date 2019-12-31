@@ -3,6 +3,7 @@ import LanguageContext from '../../contexts/LanguageContext'
 import DashboardApiService from '../../services/dashboard-api-service'
 
 import Dashboard from '../../components/Dashboard/Dashboard'
+import './DashboardRoute.css';
 
 export default class DashboardRoute extends Component {
   state = {
@@ -33,7 +34,7 @@ export default class DashboardRoute extends Component {
     return (
       <LanguageContext.Provider value={value}>
         <section className='container'>
-        <h2>{this.state.language.name}</h2>
+        <h2 className='language-name'>{this.state.language.name}</h2>
           <Dashboard />
         </section>
       </LanguageContext.Provider>

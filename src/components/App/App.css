@@ -13,10 +13,9 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    /* height: 100vh; */
-    background: linear-gradient(-90deg, var(--color-primary-medium1), var(--color-primary-medium2));
-    /* background-size: cover; */
+    background: linear-gradient(-270deg, rgba(255, 246, 143,0.3), rgba(236, 100, 75, 0.8));
 	background-repeat: none;
+	background-attachment: fixed;
 	text-align: center;
 }
 
@@ -41,26 +40,54 @@ body {
 .container {
 	border: 8px double var(--color-border);
 	border-radius: 6px;
-	box-shadow: 0 .8rem 1.5rem var(--color-primary-dark2);
+	box-shadow: .5rem .8rem .8rem var(--color-border);
 	max-width: 90%;
 	margin: 0 auto;
 	padding: 15px;
-	background-color: lightgray;
+	background-color: 	rgba(248,248,248, 1);
 }
 
 .btn {
-	text-transform: uppercase;
+	text-transform: capitalize;
 	font-family: 'Roboto', sans-serif;
 	font-size: 1rem;
-	font-weight: 900;
+	font-weight: 600;
 	cursor: pointer;
 	padding: .5rem 1.5rem;
-	border: 2px solid lightgray;
 	border-radius: 5px;
 	text-decoration: none;
+	background-color: rgba(236, 100, 75, 0.8);
+	color: rgba(248,248,248, 1);
 }
 
 .btn:hover {
-	color: red;
-	box-shadow: 0 .626rem 1.25rem rgba(230, 107, 107, 0.5);
+	color: var(--color-primary-dark1);
+	background-color: rgba(236, 100, 75, 0.6);
+	transform: translateX(-3px);
+	box-shadow: 0 .5rem .5rem var(--color-primary-medium1);
+	font-weight: 900;
+}
+
+Input {
+	/* display: inline-block; */
+	color: black;
+	width: 50%;
+	padding: .5rem 1rem;
+	box-sizing: border-box;
+	background-color: rgba(254, 250, 212, 0.3);
+	border: none;
+	border-radius: 2px;
+	margin: 10px auto;
+	transition: background-color 0.5s ease;
+	border: 1px solid var(--color-border);
+	font-size: 1rem;
+}
+
+Input:focus {
+	background-color: rgba(255,217,217, 0.4);
+}
+
+Label {
+	text-align: right;
+	margin-right: 5px;
 }

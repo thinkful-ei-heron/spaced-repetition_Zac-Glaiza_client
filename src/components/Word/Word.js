@@ -9,8 +9,11 @@ export default function Word(props) {
 		<li className='word'>
 			<h4>{word.original}</h4>
 			<h5>{word.translation}</h5>
-				Correct answer count: {word.correct_count}<br/>
-				Incorrect answer count: {word.incorrect_count}
+			<span>
+				<div>Correct answer count: {word.correct_count}</div>
+				<div>Incorrect answer count: {word.incorrect_count}</div>
+			</span>
+				
 		</li>
 	)
 }

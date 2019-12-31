@@ -1,10 +1,16 @@
 .have-account {
-    color: blue;
+    color: var(--color-border);
     cursor: pointer;
+    text-decoration: none;
 }
 
 .have-account:hover {
-    color: yellow;
+    color: var(--color-border);
     font-weight: 600;
-    text-shadow: 0 .0 1.25rem rgba(231, 26, 26, 0.8);
+    text-shadow: 0 0 1.25rem rgba(247, 202, 24, 0.8);
+    text-decoration: underline;
+}
+
+.enter-name {
+    padding-left: 1.2rem;
 }
