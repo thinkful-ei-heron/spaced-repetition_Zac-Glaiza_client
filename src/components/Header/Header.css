@@ -56,16 +56,15 @@ nav {
 
 .navblock {
 	padding: 0 5%;
-	color: var(--color-primary-medium2);
-	text-shadow: -1px 0 var(--color-primary-medium1), 0 2px var(--color-primary-medium1), 2px 0 var(--color-primary-medium1), 0 -1px var(--color-primary-medium1);
+	color: var(--color-border);
 	text-decoration: none;
 	font-size: 1.2rem;
 	font-weight: 600;
-	text-transform: capitalize;
+	text-transform: uppercase;
 }
 
 .navblock:hover {
-	text-transform: uppercase;
+	text-shadow: -1px 0 var(--color-primary-light2), 0 2px var(--color-primary-light2), 2px 0 var(--color-primary-light2), 0 -1px var(--color-primary-light2);
 	text-decoration: underline;
 	font-weight: 600;
 }

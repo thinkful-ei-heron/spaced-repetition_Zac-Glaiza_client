@@ -1,11 +1,17 @@
 import React, { Component } from 'react';
 
 const LanguageContext = React.createContext({
-    nextWord: '',
+    wordOrig: '',
+    wordTrans: '',
     wordCorrectCount: 0,
     wordIncorrectCount: 0,
     totalScore: 0,
+
+    mode: 'guess',
+    guess: '',
+
     submitHandler: () => { },
+    nextHandler: () => { },
     setError: () => { },
     clearError: () => { },
 });

@@ -7,11 +7,15 @@ import Learner from '../../components/Learner/Learner'
 
 export default class LearningRoute extends Component {
   state = {
-    nextWord: '',
-    wordCorrectCount: 0,
-    wordIncorrectCount: 0,
+    orig: '',
+    trans: '',
+    correctCount: 0,
+    incorrectCount: 0,
     totalScore: 0,
+
     mode: 'guess',
+    guess: '',
+
     error: null
   }
 
@@ -21,9 +25,10 @@ export default class LearningRoute extends Component {
     LearningApiService.getLanguageHead()
       .then(data => {
         this.setState({
-          nextWord: data.nextWord,
-          wordCorrectCount: data.wordCorrectCount,
-          wordIncorrectCount: data.wordIncorrectCount,
+          orig: data.nextWord,
+          trans: data.translation,
+          correctCount: data.wordCorrectCount,
+          incorrectCount: data.wordIncorrectCount,
           totalScore: data.totalScore
         })
       })
@@ -32,28 +37,37 @@ export default class LearningRoute extends Component {
 
   submitHandler = ev => {
     ev.preventDefault();
-    LearningApiService.languageGuess(ev.target.guess.value)
+    const guess = ev.target.guess.value;
+    this.setState({ guess })
+    LearningApiService.languageGuess(guess)
       .then(res => console.log(res))
       .catch(res => this.setState({ error: res.error }))
   }
 
+  nextHandler = () => {
+    
+  }
+
   render() {
     const value = {
-      nextWord: this.state.nextWord,
-      wordCorrectCount: this.state.wordCorrectCount,
-      wordIncorrectCount: this.state.wordIncorrectCount,
+      orig: this.state.orig,
+      trans: this.state.trans,
+      correctCount: this.state.correctCount,
+      incorrectCount: this.state.incorrectCount,
       totalScore: this.state.totalScore,
 
-      submitHandler: this.submitHandler
+      mode: this.state.mode,
+      guess: this.state.guess,
+
+      submitHandler: this.submitHandler,
+      nextHandler: this.nextHandler
     }
+
+    // console.log(this.state)
 
     return (
       <WordContext.Provider value={value}>
         <section className='container'>
-          {this.state.mode === 'guess' &&
-            <div>
-              <h3>Translate the word:</h3><span hidden>{this.state.nextWord}</span>
-            </div>}
           <Learner />
         </section>
       </WordContext.Provider>

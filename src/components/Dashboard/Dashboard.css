@@ -11,5 +11,9 @@
 
 .learn {
 	text-decoration: none;
-	color: black;
+	color: var(--color-primary-light1);
+}
+
+.learn:hover {
+	color: var(--color-border);
 }

@@ -56,12 +56,12 @@ body {
 	padding: .5rem 1.5rem;
 	border-radius: 5px;
 	text-decoration: none;
-	background-color: rgba(236, 100, 75, 0.8);
-	color: rgba(248,248,248, 1);
+	background-color: var(--color-border);
+	color: var(--color-primary-light1);
 }
 
 .btn:hover {
-	color: var(--color-primary-dark1);
+	color: var(--color-border);
 	background-color: rgba(236, 100, 75, 0.6);
 	transform: translateX(-3px);
 	box-shadow: 0 .5rem .5rem var(--color-primary-medium1);
