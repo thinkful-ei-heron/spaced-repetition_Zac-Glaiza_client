@@ -6,12 +6,12 @@ import Button from '../../components/Button/Button'
 import './Learner.css'
 
 export default class Learner extends React.Component {
-	static contextType = WordContext;
-
-	submitHandler = e => {
-		e.preventDefault();
-		
+	state = {
+		mode: 'guess',
+		error: null,
 	}
+
+	static contextType = WordContext;
 
 	render() {
 		const { nextWord, wordCorrectCount, wordIncorrectCount, totalScore } = this.context;
@@ -19,10 +19,10 @@ export default class Learner extends React.Component {
 		return (
 			<div>
 				<h2>{nextWord}</h2>
-				<form className='formGuess' onSubmit={e => this.submitHandler(e)}>
+				<form className='formGuess' onSubmit={this.context.submitHandler}>
 					<label htmlFor='learn-guess-input'>What's the translation for this word?</label>
 					<br />
-					<input id='learn-guess-input' name='learn-guess-input' type='text' required maxLength='24' autoFocus />
+					<input id='learn-guess-input' name='guess' type='text' required maxLength='24' autoFocus />
 					<Button type='submit' className='btn'>
 						Submit your answer
 				</Button>

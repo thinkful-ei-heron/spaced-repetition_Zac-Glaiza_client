@@ -5,6 +5,7 @@ const LanguageContext = React.createContext({
     wordCorrectCount: 0,
     wordIncorrectCount: 0,
     totalScore: 0,
+    submitHandler: () => { },
     setError: () => { },
     clearError: () => { },
 });

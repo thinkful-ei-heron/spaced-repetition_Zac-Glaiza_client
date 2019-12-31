@@ -11,6 +11,7 @@ export default class LearningRoute extends Component {
     wordCorrectCount: 0,
     wordIncorrectCount: 0,
     totalScore: 0,
+    mode: 'guess',
     error: null
   }
 
@@ -19,7 +20,6 @@ export default class LearningRoute extends Component {
   componentDidMount() {
     LearningApiService.getLanguageHead()
       .then(data => {
-        console.log(data)
         this.setState({
           nextWord: data.nextWord,
           wordCorrectCount: data.wordCorrectCount,
@@ -30,19 +30,31 @@ export default class LearningRoute extends Component {
       .catch(res => this.setState({ error: res.error }));
   }
 
+  submitHandler = ev => {
+    ev.preventDefault();
+    LearningApiService.languageGuess(ev.target.guess.value)
+      .then(res => console.log(res))
+      .catch(res => this.setState({ error: res.error }))
+  }
+
   render() {
     const value = {
       nextWord: this.state.nextWord,
       wordCorrectCount: this.state.wordCorrectCount,
       wordIncorrectCount: this.state.wordIncorrectCount,
-      totalScore: this.state.totalScore
+      totalScore: this.state.totalScore,
+
+      submitHandler: this.submitHandler
     }
 
     return (
       <WordContext.Provider value={value}>
         <section className='container'>
-          <h3>Translate the word:</h3><span hidden>{this.state.nextWord}</span>
-          <Learner word={this.state.word} />
+          {this.state.mode === 'guess' &&
+            <div>
+              <h3>Translate the word:</h3><span hidden>{this.state.nextWord}</span>
+            </div>}
+          <Learner />
         </section>
       </WordContext.Provider>
     );
