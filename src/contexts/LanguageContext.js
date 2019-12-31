@@ -21,10 +21,6 @@ export class LanguageProvider extends Component {
         this.state = state;
     }
     
-    componentDidMount() {}
-
-    componentWillMount() {}
-    
     setError = error => {
         console.error(error)
         this.setState({ error })
@@ -34,10 +30,6 @@ export class LanguageProvider extends Component {
         this.setState({ error: null })
     }
 
-    processLanguage = language => {
-        this.setState({ language: language.language, words: language.words})
-    };
-
 	render() {
 		const value = {
             processLanguage: this.processLanguage,
@@ -46,9 +38,6 @@ export class LanguageProvider extends Component {
             setError: this.setError,
             clearError: this.clearError,
         };
-
-        console.log(this.processLanguage);
-        console.log(this.language);
 
 		return (
 			<LanguageContext.Provider value={value}>
