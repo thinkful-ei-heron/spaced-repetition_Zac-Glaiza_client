@@ -16,7 +16,7 @@ export default class Learner extends React.Component {
 				{mode === 'guess' &&
 					<div>
 						<h2>Translate the word:</h2><span hidden>{orig}</span>
-						<p className='flashcard'>{orig}</p>
+						<h3 className='flashcard'>{orig}</h3>
 						<form className='formGuess' onSubmit={submitHandler}>
 							<label htmlFor='learn-guess-input'>What's the translation for this word?</label>
 							<br />
