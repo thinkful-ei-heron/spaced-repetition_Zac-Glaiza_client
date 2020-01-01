@@ -71,6 +71,7 @@ nav {
 
 .username {
 	text-transform: uppercase;
+	font-weight: 900;
 }
 
 .welcome {

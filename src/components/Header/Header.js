@@ -15,7 +15,7 @@ export default class Header extends React.Component {
     return (
       <div className='navbar'>
         <div className='welcome'>
-          Welcome, <span className='username'>{this.context.user.name}!</span>
+          Welcome back, <span className='username'>{this.context.user.name}!</span>
         </div>
         <nav>
           <Link
