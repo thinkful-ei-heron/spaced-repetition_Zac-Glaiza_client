@@ -1,3 +1,7 @@
-/* Label, Input, Button {
-	margin: 2%;
-} */
+.LoginForm {
+	padding: 2rem 1rem !important;
+}
+
+#login-password-input {
+	margin-left: .3rem;
+}

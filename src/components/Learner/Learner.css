@@ -1,3 +1,23 @@
 .flashcard {
 	font-size: 28px;
+	text-transform: capitalize;
+	letter-spacing: 2px;
+	background:
+	linear-gradient(
+	  to right,
+	  var(--color-primary-medium1) 0%,
+	  var(--color-primary-medium1) 5px,
+	  transparent
+	);
+	animation:  moveInRight 3s ease-in .25s;
+	animation-fill-mode: forwards;
+}
+
+.results {
+	font-weight: 900;
+}
+
+#learn-guess-input {
+	text-align: center;
+	margin-right:5px;
 }

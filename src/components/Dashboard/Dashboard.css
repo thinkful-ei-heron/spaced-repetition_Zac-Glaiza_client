@@ -17,3 +17,10 @@
 .learn:hover {
 	color: var(--color-border);
 }
+
+.results1 {
+	display: inline-block;
+	text-indent: .8rem;
+	font-size: 1.2rem;
+	font-weight: 900;
+}

@@ -196,7 +196,7 @@ describe(`User story: Login`, function() {
         cy.contains('Test name of user').should('exist')
         cy.get('nav a')
           .should('have.length', 1)
-          .and('have.text', 'Logout')
+          .and('have.text', 'Log out')
           .and('have.attr', 'href', '/login')
 
         cy.get('nav a')

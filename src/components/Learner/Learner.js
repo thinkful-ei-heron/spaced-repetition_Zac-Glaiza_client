@@ -38,9 +38,9 @@ export default class Learner extends React.Component {
 					</div>
 				}
 
-				<p>Your total score is: {totalScore}</p>
-				<p>You have answered this word correctly {correctCount} times.</p>
-				<p>You have answered this word incorrectly {incorrectCount} times.</p>
+				<p>Your total score is: <span className='results'>{totalScore}</span></p>
+				<p>You have answered this word correctly <span className='results'>{correctCount}</span> times.</p>
+				<p>You have answered this word incorrectly <span className='results'>{incorrectCount}</span> times.</p>
 			</div>
 		)
 	}

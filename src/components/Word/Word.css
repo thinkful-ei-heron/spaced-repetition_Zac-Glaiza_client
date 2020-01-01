@@ -24,3 +24,19 @@ h5:hover {
 h4 {
 	letter-spacing: 2px;
 }
+
+.cor-count {
+	text-transform: none;
+	padding-left: 1.5rem;
+	text-align: left;
+}
+
+.rst {
+	display: inline-block;
+	text-indent: 1.2rem;
+}
+
+.rst1 {
+	display: inline-block;
+	text-indent: .5rem;
+}

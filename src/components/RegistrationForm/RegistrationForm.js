@@ -41,7 +41,7 @@ class RegistrationForm extends Component {
     const { error } = this.state
     return (
       <form
-        className='container'
+        className='registerForm container'
         onSubmit={this.handleSubmit}
       >
         <div role='alert'>

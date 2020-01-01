@@ -4,3 +4,13 @@
     font-size: 1.5rem;
     font-weight: 900;
 }
+
+.container-dash {
+    border: 8px double var(--color-border);
+    border-radius: 6px;
+    box-shadow: .5rem .8rem .8rem var(--color-border);
+    max-width: 90%;
+    margin: 0 auto;
+    background-color: 	rgba(248,248,248, 1);
+    
+}

@@ -20,7 +20,7 @@ export default class Dashboard extends React.Component {
 		return (
 			<section>
 				<h3>Words to practice</h3>
-				<p>Total correct answers: {this.context.language.total_score}</p>
+				<p>Total correct answers: <span className='results1'>{this.context.language.total_score}</span></p>
 				<Button className='btn'>
 					<Link to={'/learn'} className='learn'>
 						Start practicing

@@ -1,7 +1,9 @@
 .practice-title {
-    font-size: 1.2rem;
-    font-weight: 700;
-    text-indent: 5px;
-    letter-spacing: 0.1em;
+    font-size: 1.5rem;
+    font-weight: 900;
+    text-align: justify;
+    text-justify: inter-word;
+    letter-spacing: 1px;
+    padding: 0 6%;
 }
 

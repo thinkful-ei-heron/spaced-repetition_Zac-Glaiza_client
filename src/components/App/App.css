@@ -10,6 +10,50 @@
 
 }
 
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-6.25rem);
+    }
+
+    80% {
+        transform: translateX(.0625rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+
+}
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(.0625rem);
+    }
+
+    80% {
+        transform: translateX(-1rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+
+}
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(1.875rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+
+}
 
 body {
     font-family: 'Roboto', sans-serif;
@@ -43,7 +87,7 @@ body {
 	box-shadow: .5rem .8rem .8rem var(--color-border);
 	max-width: 90%;
 	margin: 0 auto;
-	padding: 15px;
+	/* padding: 15px; */
 	background-color: 	rgba(248,248,248, 1);
 }
 
@@ -53,6 +97,7 @@ body {
 	font-size: 1rem;
 	font-weight: 600;
 	cursor: pointer;
+	margin-top: .5rem;
 	padding: .5rem 1.5rem;
 	border-radius: 5px;
 	text-decoration: none;
@@ -69,18 +114,18 @@ body {
 }
 
 Input {
-	/* display: inline-block; */
 	color: black;
-	width: 50%;
+	width: 65%;
 	padding: .5rem 1rem;
 	box-sizing: border-box;
 	background-color: rgba(254, 250, 212, 0.3);
 	border: none;
 	border-radius: 2px;
-	margin: 10px auto;
+	margin: 1rem auto;
 	transition: background-color 0.5s ease;
 	border: 1px solid var(--color-border);
 	font-size: 1rem;
+	flex: 0;
 }
 
 Input:focus {
@@ -90,4 +135,145 @@ Input:focus {
 Label {
 	text-align: right;
 	margin-right: 5px;
+}
+
+
+/* 20em = 320px to 37.5em = 600px */
+@media only screen and (min-width: 20em) and (max-width:37.5em) {
+	/* Image */
+	img {
+		margin-top: .5rem;
+		height: 40px;
+		width: 40px;
+	}
+
+	/* Space Repetition title */
+	.spaceRep-title {
+		font-size: 1.5rem;
+	}
+
+	/* For Log in, Sign Up and Log out Link */
+	.navblock {
+		font-size: 1rem;
+		padding: 1rem 1rem;
+	}
+
+	/* Copyright */
+	.copy-footer {
+		font-size: .75rem;
+		font-weight: 600;
+	}
+
+	/* Registration Form Input */
+	.registerForm > * Input {
+		margin: 0.5rem;
+	}
+
+	/* Registration Form Label */
+	.registerForm > * Label {
+		float: left;
+		/* background-color: pink; */
+		margin-top: 2%;
+		margin-left: 19%;
+		padding: 0;
+	}
+
+	/* Practice learning.. */
+	.practice-title {
+		font-size: 1rem;
+		font-weight: 900;
+		padding-top: .5rem;
+		padding-bottom: .5rem;
+	}
+
+	/* Sign up label */
+	.Signup-label {
+		font-size: 1.4rem;
+		margin: .5rem  0;
+	}
+
+	/* Already have an account */
+	.have-account {
+		margin-top: 1rem;
+		font-size: .8rem;
+		font-weight: 600;
+	}
+
+	
+
+}
+
+/* 37.5em = 600px to 56.25em = 900px */
+@media only screen and (min-width: 37.5em) and (max-width: 56.25em) {
+   /* container for login and registration */
+	.container {
+		margin: 1% 20%;
+	}
+
+	/* container for dashboard */
+	.container-dash {
+		margin: 1% 10%;
+	}
+
+	/* Space Repetition title */
+	.spaceRep-title {
+		font-size: 2rem;
+	}
+
+	/* Practice Learning */
+	.practice-title {
+		font-size: 1.2rem;
+		text-align: center;
+		padding: 0 15%;
+	}
+}
+
+/* 56.25em = 900px to 75em = 1200px */
+@media only screen and (min-width: 56.25em) and (max-width: 75em) {
+	/* container for login and registration */
+	.container {
+		margin: 1% 25%;
+	}
+
+	/* container for dashboard */
+	.container-dash {
+		margin: 0 18%;
+	}
+
+	/* Space Repetition title */
+	.spaceRep-title {
+		font-size: 2.5rem;
+	}
+
+	/* Practice Learning */
+	.practice-title {
+		text-align: center;
+		font-size: 1.5rem;
+		padding: 0 20%;
+	}
+}
+
+/* min-width 75em = 1200px */
+@media only screen and (min-width: 75em){
+	/* container for login and registration */
+    .container {
+		margin: 0 30%;
+	}
+
+	/* container for dashboard */
+	.container-dash {
+		margin: 0 25%;
+	}
+
+	/* Space Repetition title */
+	.spaceRep-title {
+		font-size: 2.6rem;
+	}
+
+	/* Practice Learning */
+	.practice-title {
+		text-align: center;
+		font-size: 1.8rem;
+		padding: 0 16%;
+	}
 }

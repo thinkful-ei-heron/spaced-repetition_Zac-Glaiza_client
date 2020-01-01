@@ -19,11 +19,10 @@ h1 {
 } */
 
 img {
-	padding: 6px;
 	border-radius: 50%;
 	height: 75px;
 	width: 75px;
-	opacity: 0.8;
+	box-shadow: 0 0 20px 5px var(--color-primary-light2);
 }
 
 .spaceRep-title {
@@ -67,10 +66,12 @@ nav {
 	text-shadow: -1px 0 var(--color-primary-light2), 0 2px var(--color-primary-light2), 2px 0 var(--color-primary-light2), 0 -1px var(--color-primary-light2);
 	text-decoration: underline;
 	font-weight: 600;
+	transform: translateX(3px);
 }
 
 .username {
 	text-transform: uppercase;
+	letter-spacing: 1px;
 	font-weight: 900;
 }
 

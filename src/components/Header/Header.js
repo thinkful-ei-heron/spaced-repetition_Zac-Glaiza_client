@@ -22,7 +22,7 @@ export default class Header extends React.Component {
             className='navblock'
             onClick={this.handleLogoutClick}
             to='/login'>
-            Logout
+            Log out
 			  		</Link>
         </nav>
       </div>
