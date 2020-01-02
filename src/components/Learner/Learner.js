@@ -30,7 +30,7 @@ export default class Learner extends React.Component {
 				{mode === 'fail' && <h2>Good try, but not quite right</h2>}
 
 				{mode !== 'guess' &&
-					<div>
+					<div className='DisplayFeedback'>
 						<p>The correct translation for {orig} is {trans} and you chose {guess}!</p>
 						<Button onClick={nextHandler} className='btn'>
 							Try Another Word
@@ -41,17 +41,18 @@ export default class Learner extends React.Component {
 				<section className='DisplayScore'>
 					{mode === 'pass'
 						? <>
-							<p>Your total score is: <span className='results'>{totalScore + 1}</span></p>
-							<p>You have answered this word correctly <span className='results'>{correctCount + 1}</span> times.</p>
+							{/* <p>Your total score is: <span className='results'>{totalScore + 1}</span></p> */}
+							<p>Your total score is: <b>{totalScore + 1}</b></p>
+							<p>You have answered this word correctly <b>{correctCount + 1}</b> times.</p>
 						</>
 						: <>
-							<p>Your total score is: <span className='results'>{totalScore}</span></p>
-							<p>You have answered this word correctly <span className='results'>{correctCount}</span> times.</p>
+							<p>Your total score is: <b>{totalScore}</b></p>
+							<p>You have answered this word correctly <b>{correctCount}</b> times.</p>
 						</>
 					}
 					{mode === 'fail'
-						? <p>You have answered this word incorrectly <span className='results'>{incorrectCount + 1}</span> times.</p>
-						: <p>You have answered this word incorrectly <span className='results'>{incorrectCount}</span> times.</p>
+						? <p>You have answered this word incorrectly <b>{incorrectCount + 1}</b> times.</p>
+						: <p>You have answered this word incorrectly <b>{incorrectCount}</b> times.</p>
 					}
 				</section>
 			</div>
