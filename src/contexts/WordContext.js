@@ -1,14 +1,17 @@
 import React, { Component } from 'react';
 
 const LanguageContext = React.createContext({
-    wordOrig: '',
-    wordTrans: '',
-    wordCorrectCount: 0,
-    wordIncorrectCount: 0,
+    orig: '',
+    trans: '',
+    correctCount: 0,
+    incorrectCount: 0,
     totalScore: 0,
 
     mode: 'guess',
     guess: '',
+    next: '',
+
+    error: null,
 
     submitHandler: () => { },
     nextHandler: () => { },
@@ -37,11 +40,20 @@ export class LanguageProvider extends Component {
 
     render() {
         const value = {
-            nextWord: this.nextWord,
-            wordCorrectCount: this.state.wordCorrectCount,
-            wordIncorrectCount: this.state.wordIncorrectCount,
+            orig: this.state.orig,
+            trans: this.state.trans,
+            correctCount: this.state.wordCorrectCount,
+            incorrectCount: this.state.wordIncorrectCount,
             totalScore: this.state.totalScore,
+
+            mode: this.state.mode,
+            guess: this.state.guess,
+            next: this.state.next,
+
             error: this.state.error,
+
+            submitHandler: this.state.submitHandler,
+            nextHandler: this.state.nextHandler,
             setError: this.setError,
             clearError: this.clearError,
         };
