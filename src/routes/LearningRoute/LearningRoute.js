@@ -48,6 +48,17 @@ export default class LearningRoute extends Component {
         });
       })
       .catch(res => this.setState({ error: res.error }))
+
+    //   LearningApiService.getLanguageHead()
+    //   .then(data => {
+    //         this.setState({ 
+    //         orig: data.nextWord,
+    //         correctCount: data.wordCorrectCount,
+    //         incorrectCount: data.wordIncorrectCount,
+    //         totalScore: data.totalScore
+    //   });
+    // })
+    //   .catch(res => this.setState({ error: res.error }))
   }
 
   nextHandler = () => {
@@ -72,7 +83,8 @@ export default class LearningRoute extends Component {
       nextHandler: this.nextHandler
     }
 
-    // console.log('mode =>' + this.state.mode)
+    // console.log('correct count =>' + this.state.correctCount)
+    // console.log('inCorrect count =>' + this.state.incorrectCount)
 
     return (
       <WordContext.Provider value={value}>

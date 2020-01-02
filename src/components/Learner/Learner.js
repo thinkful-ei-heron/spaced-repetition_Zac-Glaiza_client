@@ -1,6 +1,5 @@
 import React from 'react'
 import WordContext from '../../contexts/WordContext'
-
 import Button from '../../components/Button/Button'
 
 import './Learner.css'
@@ -10,6 +9,8 @@ export default class Learner extends React.Component {
 
 	render() {
 		const { orig, trans, guess, correctCount, incorrectCount, totalScore, mode, submitHandler, nextHandler } = this.context;
+		const correctResult = mode===true ? (correctCount ? correctCount+1 : '') : (correctCount ? correctCount : '');
+		const incorrectResult = mode===false ? (incorrectCount ? incorrectCount+1 : '') : (incorrectCount ? incorrectCount : '')
 
 		return (
 			<div>
@@ -42,16 +43,16 @@ export default class Learner extends React.Component {
 					{mode === true
 						? <>
 							<p className='totScore'>Your total score is: <span className='results'>{totalScore}</span></p>
-							<p>You have answered this word correctly <span className='results'>{correctCount + 1}</span> times.</p>
+							<p>You have answered this word correctly <span className='results'>{correctResult}</span> times.</p>
 						</>
 						: <>
 							<p className='totScore'>Your total score is: <span className='results'>{totalScore}</span></p>
-							<p>You have answered this word correctly <span className='results'>{correctCount}</span> times.</p>
+							<p>You have answered this word correctly <span className='results'>{correctResult}</span> times.</p>
 						</>
 					}
 					{mode === false
-						? <p>You have answered this word incorrectly <span className='results'>{incorrectCount + 1}</span> times.</p>
-						: <p>You have answered this word incorrectly <span className='results'>{incorrectCount}</span> times.</p>
+						? <p>You have answered this word incorrectly <span className='results'>{incorrectResult}</span> times.</p>
+						: <p>You have answered this word incorrectly <span className='results'>{incorrectResult}</span> times.</p>
 					}
 				</section>
 			</div>
