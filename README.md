@@ -8,7 +8,7 @@ It is a collaboration between Glaiza Wagner and Zacharia Lutz.
 
 ## Account login for demo
 
-&ensp;username: admin
+&ensp;username: admin </br>
 &ensp;password: pass
 
 ## About this project
@@ -22,7 +22,7 @@ It is a collaboration between Glaiza Wagner and Zacharia Lutz.
 - Cypress
 - JWT-Decode
 
-Client - Deployed in Zeit
+Client - Deployed in Zeit </br>
 Server - Deployed in Heroku 
 
 Copyright G©Z 2020
