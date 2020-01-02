@@ -2,7 +2,7 @@
 	position: fixed;
 	bottom: 0;
 	width: 100%;
-	padding: 5px 10px 10px 10px;
-	height: 2rem;
+	padding: .5rem 0;
+	font-size: .9rem;
 	font-weight: 600;
 }

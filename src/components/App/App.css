@@ -7,7 +7,7 @@
 	--color-primary-light2: rgba(254, 250, 212, 1);
 
 	--color-border: rgba(150, 40, 27, 1);
-
+	--color-border-medium: rgba(150, 40, 27, 0.5);
 }
 
 @keyframes moveInLeft {
@@ -83,12 +83,16 @@ body {
 
 .container {
 	border: 8px double var(--color-border);
-	border-radius: 6px;
-	box-shadow: .5rem .8rem .8rem var(--color-border);
+	border-radius: 8px;
+	/* box-shadow: .5rem .8rem .8rem var(--color-border); */
+	box-shadow: 5px 5px rgba(150, 40, 27, .6),
+				10px 10px rgba(150, 40, 27, .4),
+				15px 15px rgba(150, 40, 27, .2)
+	;
 	max-width: 90%;
 	margin: 0 auto;
 	/* padding: 15px; */
-	background-color: 	rgba(248,248,248, 1);
+	background-color: rgba(248,248,248, 1);
 }
 
 .btn {
@@ -125,7 +129,7 @@ Input {
 	transition: background-color 0.5s ease;
 	border: 1px solid var(--color-border);
 	font-size: 1rem;
-	flex: 0;
+	flex: 0 1;
 }
 
 Input:focus {
@@ -212,7 +216,7 @@ Label {
 
 	/* container for dashboard */
 	.container-dash {
-		margin: 1% 10%;
+		margin: 1% 10% 10% 10%;
 	}
 
 	/* Space Repetition title */
@@ -226,6 +230,12 @@ Label {
 		text-align: center;
 		padding: 0 15%;
 	}
+
+	/* Registration Form Input */
+	.registerForm > * Input {
+		/* margin: 0.5rem; */
+		width: 55%
+	}
 }
 
 /* 56.25em = 900px to 75em = 1200px */
@@ -237,7 +247,7 @@ Label {
 
 	/* container for dashboard */
 	.container-dash {
-		margin: 0 18%;
+		margin: 0 18% 10% 18%;
 	}
 
 	/* Space Repetition title */
@@ -251,6 +261,11 @@ Label {
 		font-size: 1.5rem;
 		padding: 0 20%;
 	}
+
+	/* Registration Form Input */
+	.registerForm > * Input {
+		width: 60%
+	}
 }
 
 /* min-width 75em = 1200px */
@@ -262,7 +277,7 @@ Label {
 
 	/* container for dashboard */
 	.container-dash {
-		margin: 0 25%;
+		margin: 0 25% 10% 25%;
 	}
 
 	/* Space Repetition title */
