@@ -1,5 +1,6 @@
 ## Project Name: Spaced-Repetition
 
+Use the spaced-repetition technique to learn twenty Latin words.
 It is a collaboration between Glaiza Wagner and Zacharia Lutz.
 
 - Live app  :   [Spaced-Repetition-Client] (...)
@@ -25,4 +26,4 @@ It is a collaboration between Glaiza Wagner and Zacharia Lutz.
 Client - Deployed in Zeit </br>
 Server - Deployed in Heroku 
 
-Copyright G©Z 2020
+Copyright © G&Z 2020
