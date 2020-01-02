@@ -9,7 +9,7 @@
 	  var(--color-primary-medium1) 5px,
 	  transparent
 	);
-	animation:  moveInBottom 3s ease-in .25s;
+	animation:  moveInBottom 1s ease-in .25s;
 	animation-fill-mode: backwards;
 }
 
