@@ -9,8 +9,8 @@ export default class Learner extends React.Component {
 
 	render() {
 		const { orig, trans, guess, correctCount, incorrectCount, totalScore, mode, submitHandler, nextHandler } = this.context;
-		const correctResult = mode===true ? (correctCount ? (correctCount+1) : '') : (correctCount ? correctCount : '');
-		const incorrectResult = mode===false ? (incorrectCount ? incorrectCount+1 : '') : (incorrectCount ? incorrectCount : '')
+		const correctResult = mode===true ? correctCount+1 : correctCount
+		const incorrectResult = mode===false ? incorrectCount+1 : incorrectCount
 		const mytotalScore = mode ===true ? totalScore+1 : totalScore;
 
 		return (
