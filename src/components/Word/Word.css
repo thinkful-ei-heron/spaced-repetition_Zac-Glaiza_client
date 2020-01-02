@@ -8,17 +8,17 @@
 	box-shadow: 3px 3px var(--color-border);
 }
 
-.word:hover {
+/* .word:hover {
 	transform: translate(1%, 1%);
 	cursor: pointer;
 	box-shadow: 7px 7px var(--color-border);
-}
+} */
 
-h5:hover {
+h5 {
 	text-transform: uppercase;
 	letter-spacing: 3px;
 	color: var(--color-primary-dark1);
-	font-weight: 600;
+	font-weight: 900;
 }
 
 h4 {
