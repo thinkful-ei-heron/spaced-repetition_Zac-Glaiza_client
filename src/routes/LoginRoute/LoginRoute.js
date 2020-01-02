@@ -18,7 +18,7 @@ class LoginRoute extends Component {
   render() {
     return (
       <section className='subheader'>
-        <h2>Log in</h2>
+        <h2 className='Signup-label'>Log in</h2>
         <LoginForm
           onLoginSuccess={this.handleLoginSuccess}
         />

@@ -13,19 +13,17 @@ export default class Header extends React.Component {
 
   renderLogoutLink() {
     return (
-      <div className='navbar'>
+      <nav className='navbar'>
         <div className='welcome'>
-          Welcome back, <span className='username'>{this.context.user.name}!</span>
+          Welcome back, <span className='username'>{this.context.user.name}! </span>
         </div>
-        <nav>
-          <Link
-            className='navblock'
-            onClick={this.handleLogoutClick}
-            to='/login'>
-            Log out
+        <Link
+          className='navblock'
+          onClick={this.handleLogoutClick}
+          to='/login'>
+          Log out
 			  		</Link>
-        </nav>
-      </div>
+      </nav>
     )
   }
 
@@ -43,24 +41,26 @@ export default class Header extends React.Component {
     return (
       <header>
         <div className='headerTop'>
+          {/* <Link to='/'> */}
+
+        {/* </Link> */}
+
         <Link className='spaceRep-title' to='/'>
-            <img
-              src='https://eu4.paradoxwikis.com/images/thumb/4/4e/Roman_Empire.png/330px-Roman_Empire.png'
-              alt='Flag of the Roman Republic'
-            />
-          </Link>
-          
-          <h1 className='space-title'>
-            <Link className='spaceRep-title' to='/'>
-              Spaced Repetition
-            </Link>
-          </h1>
-          <div /> {/* place-holder for flexbox */}
+          <img
+            src='https://eu4.paradoxwikis.com/images/thumb/4/4e/Roman_Empire.png/330px-Roman_Empire.png'
+            alt='Flag of the Roman Republic'
+          />
+          <h1 className='space-title'>Spaced Repetition</h1>
+
+        </Link>
+        {/* //   </h1> */}
         </div>
-        {TokenService.hasAuthToken()
-          ? this.renderLogoutLink()
-          : this.renderLoginLink()}
-      </header>
+        {
+          TokenService.hasAuthToken()
+            ? this.renderLogoutLink()
+            : this.renderLoginLink()
+        }
+      </header >
     );
   }
 }
