@@ -9,8 +9,9 @@ export default class Learner extends React.Component {
 
 	render() {
 		const { orig, trans, guess, correctCount, incorrectCount, totalScore, mode, submitHandler, nextHandler } = this.context;
-		const correctResult = mode===true ? (correctCount ? correctCount+1 : '') : (correctCount ? correctCount : '');
+		const correctResult = mode===true ? (correctCount ? (correctCount+1) : '') : (correctCount ? correctCount : '');
 		const incorrectResult = mode===false ? (incorrectCount ? incorrectCount+1 : '') : (incorrectCount ? incorrectCount : '')
+		const mytotalScore = mode ===true ? totalScore+1 : totalScore;
 
 		return (
 			<div>
@@ -42,11 +43,11 @@ export default class Learner extends React.Component {
 				<section className='DisplayScore'>
 					{mode === true
 						? <>
-							<p className='totScore'>Your total score is: <span className='results'>{totalScore}</span></p>
+							<p className='totScore'>Your total score is: <span className='results'>{mytotalScore}</span></p>
 							<p>You have answered this word correctly <span className='results'>{correctResult}</span> times.</p>
 						</>
 						: <>
-							<p className='totScore'>Your total score is: <span className='results'>{totalScore}</span></p>
+							<p className='totScore'>Your total score is: <span className='results'>{mytotalScore}</span></p>
 							<p>You have answered this word correctly <span className='results'>{correctResult}</span> times.</p>
 						</>
 					}
