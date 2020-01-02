@@ -85,11 +85,11 @@ describe(`User story: Answer feedback`, function() {
         const [languageHeadFixture, incorrectFixture] = fixtures
 
         cy.get('main').within($main => {
-          // cy.get('.DisplayScore p')
-          //   .should(
-          //     'have.text',
-          //     `Your total score is: ${incorrectFixture.totalScore}`,
-          //   )
+          cy.get('.DisplayScore .totScore')
+            .should(
+              'have.text',
+              `Your total score is: ${incorrectFixture.totalScore}`,
+            )
           cy.get('h2')
             .should(
               'have.text',
@@ -136,14 +136,14 @@ describe(`User story: Answer feedback`, function() {
         cy.fixture('language-guess-correct.json')
           .then(fx => fixtures.push(fx)),
       ]).then(() => {
-        const [languageHeadFixture, correctFixture] = fixtures
+        const [languageHeadFixture, incorrectFixture] = fixtures
 
         cy.get('main').within($main => {
-          // cy.get('.DisplayScore p')
-          //   .should(
-          //     'have.text',
-          //     `Your total score is: ${incorrectFixture.totalScore}`,
-          //   )
+          cy.get('.DisplayScore .totScore')
+            .should(
+              'have.text',
+              `Your total score is: ${incorrectFixture.totalScore}`,
+            )
           cy.get('h2')
             .should(
               'have.text',
@@ -152,12 +152,12 @@ describe(`User story: Answer feedback`, function() {
           cy.get('.DisplayFeedback p')
             .should(
               'have.text',
-              `The correct translation for ${languageHeadFixture.nextWord} was ${correctFixture.answer} and you chose ${guess}!`,
+              `The correct translation for ${languageHeadFixture.nextWord} is ${incorrectFixture.answer} and you chose ${guess}!`,
             )
           cy.get('button')
             .should(
               'have.text',
-              `Try another word!`,
+              `Try Another Word`,
             )
         })
       })

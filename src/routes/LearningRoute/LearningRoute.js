@@ -13,7 +13,7 @@ export default class LearningRoute extends Component {
     incorrectCount: 0,
     totalScore: 0,
 
-    mode: 'guess',
+    mode: null,
     guess: '',
     next: '',
 
@@ -43,10 +43,9 @@ export default class LearningRoute extends Component {
       .then(res => {
         this.setState({
           next: res.nextWord,
-          trans: res.answer
+          trans: res.answer,
+          mode: res.isCorrect
         });
-        if (guess === this.state.trans) this.setState({ mode: 'pass' });
-        else this.setState({ mode: 'fail' });
       })
       .catch(res => this.setState({ error: res.error }))
   }
@@ -73,7 +72,7 @@ export default class LearningRoute extends Component {
       nextHandler: this.nextHandler
     }
 
-    // console.log(this.state)
+    console.log('mode =>' + this.state.mode)
 
     return (
       <WordContext.Provider value={value}>

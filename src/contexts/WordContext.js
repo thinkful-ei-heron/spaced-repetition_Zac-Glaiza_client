@@ -7,7 +7,7 @@ const LanguageContext = React.createContext({
     incorrectCount: 0,
     totalScore: 0,
 
-    mode: 'guess',
+    mode: null,
     guess: '',
     next: '',
 
