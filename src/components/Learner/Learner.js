@@ -41,18 +41,17 @@ export default class Learner extends React.Component {
 				<section className='DisplayScore'>
 					{mode === true
 						? <>
-							{/* <p>Your total score is: <span className='results'>{totalScore + 1}</span></p> */}
-							<p className='totScore'>Your total score is: {totalScore}</p>
-							<p>You have answered this word correctly <b>{correctCount + 1}</b> times.</p>
+							<p className='totScore'>Your total score is: <span className='results'>{totalScore}</span></p>
+							<p>You have answered this word correctly <span className='results'>{correctCount + 1}</span> times.</p>
 						</>
 						: <>
-							<p className='totScore'>Your total score is: {totalScore}</p>
-							<p>You have answered this word correctly <b>{correctCount}</b> times.</p>
+							<p className='totScore'>Your total score is: <span className='results'>{totalScore}</span></p>
+							<p>You have answered this word correctly <span className='results'>{correctCount}</span> times.</p>
 						</>
 					}
 					{mode === false
-						? <p>You have answered this word incorrectly <b>{incorrectCount + 1}</b> times.</p>
-						: <p>You have answered this word incorrectly <b>{incorrectCount}</b> times.</p>
+						? <p>You have answered this word incorrectly <span className='results'>{incorrectCount + 1}</span> times.</p>
+						: <p>You have answered this word incorrectly <span className='results'>{incorrectCount}</span> times.</p>
 					}
 				</section>
 			</div>

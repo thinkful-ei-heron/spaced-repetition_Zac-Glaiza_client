@@ -72,7 +72,7 @@ export default class LearningRoute extends Component {
       nextHandler: this.nextHandler
     }
 
-    console.log('mode =>' + this.state.mode)
+    // console.log('mode =>' + this.state.mode)
 
     return (
       <WordContext.Provider value={value}>
