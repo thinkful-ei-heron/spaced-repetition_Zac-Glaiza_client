@@ -156,9 +156,14 @@ Label {
 		width: 40px;
 	}
 
-	/* Space Repetition title */
+	/* Space Repetition title
 	.spaceRep-title {
-		font-size: 1.5rem;
+		vertical-align: center;
+	} */
+
+	/* Header Top for Image and Space Repetition */
+	.headerTop {
+		vertical-align: middle;
 	}
 
 	/* For Log in, Sign Up and Log out Link */
@@ -205,6 +210,17 @@ Label {
 
 /* 37.5em = 600px to 56.25em = 900px */
 @media only screen and (min-width: 37.5em) and (max-width: 56.25em) {
+
+	/* Header Top for Image and Space Repetition */
+	.headerTop {
+		margin-top: 2rem;
+	}
+
+	/* Space Repetition title */
+	.space-title {
+		font-size: 2rem;
+	}
+
    /* container for login and registration */
 	.container {
 		margin: 1% 20%;
@@ -213,11 +229,6 @@ Label {
 	/* container for dashboard */
 	.container-dash {
 		margin: 1% 10% 10% 10%;
-	}
-
-	/* Space Repetition title */
-	.spaceRep-title {
-		font-size: 2rem;
 	}
 
 	/* Practice Learning */
@@ -236,6 +247,16 @@ Label {
 
 /* 56.25em = 900px to 75em = 1200px */
 @media only screen and (min-width: 56.25em) and (max-width: 75em) {
+	/* Header Top for Image and Space Repetition */
+	.headerTop {
+		margin-top: 2rem;
+	}
+	
+	/* Space Repetition title */
+	.space-title {
+		font-size: 2.5rem;
+	}
+
 	/* container for login and registration */
 	.container {
 		margin: 1% 25%;
@@ -244,11 +265,6 @@ Label {
 	/* container for dashboard */
 	.container-dash {
 		margin: 0 18% 10% 18%;
-	}
-
-	/* Space Repetition title */
-	.spaceRep-title {
-		font-size: 2.5rem;
 	}
 
 	/* Practice Learning */
@@ -266,6 +282,17 @@ Label {
 
 /* min-width 75em = 1200px */
 @media only screen and (min-width: 75em){
+
+	/* Header Top for Image and Space Repetition */
+	.headerTop {
+		margin-top: 2rem;
+	}
+		
+	/* Space Repetition title */
+	.space-title {
+		font-size: 2.6rem;
+	}
+	
 	/* container for login and registration */
     .container {
 		margin: 0 30%;
@@ -275,12 +302,7 @@ Label {
 	.container-dash {
 		margin: 0 25% 10% 25%;
 	}
-
-	/* Space Repetition title */
-	.spaceRep-title {
-		font-size: 2.6rem;
-	}
-
+	
 	/* Practice Learning */
 	.practice-title {
 		text-align: center;
