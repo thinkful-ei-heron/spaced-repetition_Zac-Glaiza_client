@@ -6,6 +6,11 @@ It is a collaboration between Glaiza Wagner and Zacharia Lutz.
 - Heroku    :   [Spaced-Repetition-Server] (...)
 - GitHub    :   [Repo-Link] (...)
 
+## Account login for demo
+
+&ensp;username: admin
+&ensp;password: pass
+
 ## About this project
 
 
