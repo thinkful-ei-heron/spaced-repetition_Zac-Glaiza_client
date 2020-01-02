@@ -141,6 +141,11 @@ Label {
 	margin-right: 5px;
 }
 
+.Signup-label {
+		font-size: 1.4rem;
+		margin: .1rem  0;
+	}
+
 
 /* 20em = 320px to 37.5em = 600px */
 @media only screen and (min-width: 20em) and (max-width:37.5em) {
@@ -190,21 +195,12 @@ Label {
 		padding-bottom: .5rem;
 	}
 
-	/* Sign up label */
-	.Signup-label {
-		font-size: 1.4rem;
-		margin: .5rem  0;
-	}
-
 	/* Already have an account */
 	.have-account {
 		margin-top: 1rem;
 		font-size: .8rem;
 		font-weight: 600;
 	}
-
-	
-
 }
 
 /* 37.5em = 600px to 56.25em = 900px */

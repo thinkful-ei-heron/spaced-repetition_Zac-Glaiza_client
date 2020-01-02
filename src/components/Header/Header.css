@@ -2,27 +2,39 @@ header {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-evenly;
-	margin: 2% 0;
+	margin: 0 auto 2%;
+	width: 90%;
+	padding: auto;
 }
 
 h1 {
+	display: inline-block;
 	text-transform: uppercase;
 	letter-spacing: 1px;
+	font-size: 100%;
 	font-family: 'Merriweather', serif;
-	margin: auto 0;
+	margin: 0;
+	/* height: 75px; */
+	padding: auto 0;
 }
 
-/* .headerTop {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-evenly;
-} */
+.headerTop {
+	width: 100%;
+	padding: 0;
+	margin: 2% 0;
+}
 
 img {
+	display: inline-block;
 	border-radius: 50%;
-	height: 75px;
-	width: 75px;
+	height: 80px;
+	width: 80px;
 	box-shadow: 0 0 20px 5px var(--color-primary-light2);
+	margin: 0 3% 0 0;
+	position: absolute;
+  	top: 50%;
+  	/* left: 50%; */
+  	transform: translate(-120%, -50%);
 }
 
 .spaceRep-title {
@@ -31,6 +43,7 @@ img {
 	cursor: pointer;
 	font-size: 2rem;
 	font-weight: 900;
+	position: relative;
 }
 
 .spaceRep-title:hover {
@@ -46,15 +59,14 @@ img {
 nav {
 	display: flex;
 	flex-direction: row;
-	justify-content: center;
-}
-
-.navbar {
-	margin-top: 2%;
+	justify-content: space-evenly;
+	margin: 0 auto;
+	min-width: 50%;
+	/* max-width: 85%; */
 }
 
 .navblock {
-	padding: 0 5%;
+	display: inline;
 	color: var(--color-border);
 	text-decoration: none;
 	font-size: 1.2rem;
@@ -80,5 +92,5 @@ nav {
 }
 
 .space-title {
-	margin-bottom: 2%;
+	display: inline-block;
 }
