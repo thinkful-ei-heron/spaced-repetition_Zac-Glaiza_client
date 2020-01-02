@@ -1,0 +1,14 @@
+{
+    "version": 2,
+    "alias": "gz-spaced-repetition-app",
+    "name": "spaced-repetition-client",
+    "routes": [
+        {
+          "handle": "filesystem"
+        },
+        {
+          "src": ".*",
+          "dest": "/index.html"
+        }
+    ]
+  }
