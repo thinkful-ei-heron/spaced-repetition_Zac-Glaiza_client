@@ -15,6 +15,7 @@ const LanguageContext = React.createContext({
 
     submitHandler: () => { },
     nextHandler: () => { },
+
     setError: () => { },
     clearError: () => { },
 });
@@ -54,6 +55,7 @@ export class LanguageProvider extends Component {
 
             submitHandler: this.state.submitHandler,
             nextHandler: this.state.nextHandler,
+
             setError: this.setError,
             clearError: this.clearError,
         };
