@@ -15,6 +15,7 @@ export default class LearningRoute extends Component {
 
     mode: 'guess',
     guess: '',
+    next: '',
 
     error: null
   }
@@ -26,7 +27,6 @@ export default class LearningRoute extends Component {
       .then(data => {
         this.setState({
           orig: data.nextWord,
-          trans: data.translation,
           correctCount: data.wordCorrectCount,
           incorrectCount: data.wordIncorrectCount,
           totalScore: data.totalScore
@@ -40,12 +40,19 @@ export default class LearningRoute extends Component {
     const guess = ev.target.guess.value;
     this.setState({ guess })
     LearningApiService.languageGuess(guess)
-      .then(res => console.log(res))
+      .then(res => {
+        this.setState({
+          next: res.nextWord,
+          trans: res.answer
+        });
+        if (guess === this.state.trans) this.setState({ mode: 'pass' });
+        else this.setState({ mode: 'fail' });
+      })
       .catch(res => this.setState({ error: res.error }))
   }
 
   nextHandler = () => {
-    
+
   }
 
   render() {
@@ -58,6 +65,9 @@ export default class LearningRoute extends Component {
 
       mode: this.state.mode,
       guess: this.state.guess,
+      next: this.state.next,
+
+      error: this.state.error,
 
       submitHandler: this.submitHandler,
       nextHandler: this.nextHandler

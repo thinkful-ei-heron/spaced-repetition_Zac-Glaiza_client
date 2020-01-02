@@ -21,11 +21,11 @@ export default class Dashboard extends React.Component {
 			<section>
 				<h3>Words to practice</h3>
 				<p>Total correct answers: <span className='results1'>{this.context.language.total_score}</span></p>
-				<Button className='btn'>
-					<Link to={'/learn'} className='learn'>
+				<Link to={'/learn'} className='learn'>
+					<Button className='btn'>
 						Start practicing
-					</Link>
-				</Button>
+					</Button>
+				</Link>
 				<ul className='wordList'>
 					{this.renderWords()}
 				</ul>
