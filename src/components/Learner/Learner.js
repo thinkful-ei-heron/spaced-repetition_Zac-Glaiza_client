@@ -38,20 +38,22 @@ export default class Learner extends React.Component {
 					</div>
 				}
 
-				{mode === 'pass'
-					? <>
-						<p>Your total score is: <span className='results'>{totalScore + 1}</span></p>
-						<p>You have answered this word correctly <span className='results'>{correctCount + 1}</span> times.</p>
-					</>
-					: <>
-						<p>Your total score is: <span className='results'>{totalScore}</span></p>
-						<p>You have answered this word correctly <span className='results'>{correctCount}</span> times.</p>
-					</>
-				}
-				{mode === 'fail'
-					? <p>You have answered this word incorrectly <span className='results'>{incorrectCount + 1}</span> times.</p>
-					: <p>You have answered this word incorrectly <span className='results'>{incorrectCount}</span> times.</p>
-				}
+				<section className='DisplayScore'>
+					{mode === 'pass'
+						? <>
+							<p>Your total score is: <span className='results'>{totalScore + 1}</span></p>
+							<p>You have answered this word correctly <span className='results'>{correctCount + 1}</span> times.</p>
+						</>
+						: <>
+							<p>Your total score is: <span className='results'>{totalScore}</span></p>
+							<p>You have answered this word correctly <span className='results'>{correctCount}</span> times.</p>
+						</>
+					}
+					{mode === 'fail'
+						? <p>You have answered this word incorrectly <span className='results'>{incorrectCount + 1}</span> times.</p>
+						: <p>You have answered this word incorrectly <span className='results'>{incorrectCount}</span> times.</p>
+					}
+				</section>
 			</div>
 		)
 	}
