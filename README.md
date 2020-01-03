@@ -14,9 +14,6 @@ It is a collaboration between [Glaiza Wagner](https://github.com/glaizawagner) a
 &ensp;username: admin </br>
 &ensp;password: pass
 
-## About this project
-
-
 ## Technologies
 - HTML5
 - CSS3 
