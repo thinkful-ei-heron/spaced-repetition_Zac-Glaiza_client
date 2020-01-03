@@ -42,3 +42,25 @@
 	font-weight: 900;
 	text-transform: capitalize;
 }
+
+.trans2 {
+	color: var(--color-green);
+	font-weight: 900;
+	text-transform: capitalize;
+	text-decoration-line: underline;
+  	text-decoration-style: double;
+}
+
+.guess2 {
+	color: var(--color-green);
+	font-weight: 900;
+	text-transform: capitalize;
+}
+
+.correctMsg {
+	color: var(--color-green);
+}
+
+.wrongMsg {
+	color: var(--color-primary-dark1);
+}	

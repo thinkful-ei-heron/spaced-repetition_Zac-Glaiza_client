@@ -9,9 +9,9 @@ export default class Learner extends React.Component {
 
 	render() {
 		const { orig, trans, guess, correctCount, incorrectCount, totalScore, mode, submitHandler, nextHandler } = this.context;
-		const correctResult = mode===true ? correctCount+1 : correctCount
-		const incorrectResult = mode===false ? incorrectCount+1 : incorrectCount
-		const mytotalScore = mode ===true ? totalScore+1 : totalScore;
+		const correctResult = mode === true ? correctCount + 1 : correctCount
+		const incorrectResult = mode === false ? incorrectCount + 1 : incorrectCount
+		const mytotalScore = mode === true ? totalScore + 1 : totalScore;
 
 		return (
 			<div>
@@ -28,12 +28,15 @@ export default class Learner extends React.Component {
 							</Button>
 						</form>
 					</div>}
-				{mode === true && <h2>You were correct!</h2>}
-				{mode === false && <h2>Good try, but not quite right</h2>}
+				{mode === true && <h2 className='correctMsg'>You were correct!</h2>}
+				{mode === false && <h2 className='wrongMsg'>Good try, but not quite right</h2>}
 
 				{mode !== null &&
 					<div className='DisplayFeedback'>
-						<p>The correct translation for <span className='orig'>{orig}</span> is <span className='trans'>{trans}</span> and you chose <span className='guess'>{guess}</span>!</p>
+						{mode === false
+							? <p>The correct translation for <span className='orig'>{orig}</span> is <span className='trans'>{trans}</span> and you chose <span className='guess'>{guess}</span>!</p>
+							: <p>The correct translation for <span className='orig'>{orig}</span> is <span className='trans2'>{trans}</span> and you chose <span className='guess2'>{guess}</span>!</p>
+						}
 						<Button onClick={nextHandler} className='btn'>
 							Try Another Word
 						</Button>
