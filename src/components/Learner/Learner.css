@@ -30,7 +30,7 @@
 }
 
 .trans {
-	color: var(--color-primary-dark1);
+	color: var(--color-red);
 	font-weight: 900;
 	text-transform: capitalize;
 	text-decoration-line: underline;
@@ -38,7 +38,7 @@
 }
 
 .guess {
-	color: var(--color-primary-dark1);
+	color: var(--color-red);
 	font-weight: 900;
 	text-transform: capitalize;
 }
