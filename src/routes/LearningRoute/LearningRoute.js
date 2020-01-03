@@ -23,6 +23,10 @@ export default class LearningRoute extends Component {
   static contextType = LanguageContext;
 
   componentDidMount() {
+    this.loadWord();
+  }
+
+  loadWord() {
     LearningApiService.getLanguageHead()
       .then(data => {
         this.setState({
@@ -62,7 +66,8 @@ export default class LearningRoute extends Component {
   }
 
   nextHandler = () => {
-
+    this.setState({ mode: null });
+    this.loadWord();
   }
 
   render() {
