@@ -14,6 +14,26 @@ It is a collaboration between [Glaiza Wagner](https://github.com/glaizawagner) a
 &ensp;username: admin </br>
 &ensp;password: pass
 
+## Screenshots
+
+&ensp;Sign up Page
+![Sign up Page](./screenshots/signup.png)
+
+&ensp;Log in Page
+![Log in Page](./screenshots/login.png)
+
+&ensp;Dashboard
+![Dashboard Page](./screenshots/dashboard.png)
+
+&ensp;Learning Page
+![Learning Page](./screenshots/learning.png)
+
+&ensp;Learning Page - correct answer
+![Learning - correct Answer](./screenshots/correctAnswer.png)
+
+&ensp;Learning Page - incorrect answer
+![Learning - in correct Answer](./screenshots/wrongAnswer.png)
+
 ## Technologies
 - HTML5
 - CSS3 
