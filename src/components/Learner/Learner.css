@@ -21,3 +21,24 @@
 	text-align: center;
 	margin-right:5px;
 }
+
+.orig {
+	color: var(--color-border);
+	text-transform: uppercase;
+	font-weight: 900;
+	letter-spacing: 1px;
+}
+
+.trans {
+	color: var(--color-primary-dark1);
+	font-weight: 900;
+	text-transform: capitalize;
+	text-decoration-line: underline;
+  	text-decoration-style: double;
+}
+
+.guess {
+	color: var(--color-primary-dark1);
+	font-weight: 900;
+	text-transform: capitalize;
+}

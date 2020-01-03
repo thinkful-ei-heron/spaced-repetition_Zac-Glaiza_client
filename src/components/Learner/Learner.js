@@ -33,7 +33,7 @@ export default class Learner extends React.Component {
 
 				{mode !== null &&
 					<div className='DisplayFeedback'>
-						<p>The correct translation for {orig} is {trans} and you chose {guess}!</p>
+						<p>The correct translation for <span className='orig'>{orig}</span> is <span className='trans'>{trans}</span> and you chose <span className='guess'>{guess}</span>!</p>
 						<Button onClick={nextHandler} className='btn'>
 							Try Another Word
 						</Button>
