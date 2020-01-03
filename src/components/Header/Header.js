@@ -18,7 +18,7 @@ export default class Header extends React.Component {
           Welcome back, <span className='username'>{this.context.user.name}! </span>
         </div>
         <Link
-          className='navblock'
+          className='navblock-out'
           onClick={this.handleLogoutClick}
           to='/login'>
           Log out

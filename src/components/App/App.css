@@ -156,14 +156,10 @@ Label {
 		width: 40px;
 	}
 
-	/* Space Repetition title
-	.spaceRep-title {
-		vertical-align: center;
-	} */
-
 	/* Header Top for Image and Space Repetition */
 	.headerTop {
 		vertical-align: middle;
+		margin: 0 6% 2% 6%;
 	}
 
 	/* For Log in, Sign Up and Log out Link */
@@ -210,10 +206,37 @@ Label {
 
 /* 37.5em = 600px to 56.25em = 900px */
 @media only screen and (min-width: 37.5em) and (max-width: 56.25em) {
+	/* Image */
+	img {
+		margin-top: .5rem;
+		height: 50px;
+		width: 50px;
+	}
 
 	/* Header Top for Image and Space Repetition */
 	.headerTop {
-		margin-top: 2rem;
+		margin: 1% 5% 1.5% 5%;
+	}
+
+	/* Welcome and username */
+	.welcome {
+		font-size: 1rem;
+	}
+
+	.navbar {
+		margin: 2% 0 0 0;
+	}
+
+	/* For Log in, Sign Up and Log out Link */
+	.navblock {
+		font-size: 1.2rem;
+		padding: 1rem 1rem;
+	}
+
+	/* Logout */
+	.navblock-out {
+		font-size: 1.2rem;
+		line-height: 18px;
 	}
 
 	/* Space Repetition title */
@@ -247,11 +270,39 @@ Label {
 
 /* 56.25em = 900px to 75em = 1200px */
 @media only screen and (min-width: 56.25em) and (max-width: 75em) {
+	/* Image */
+	img {
+		margin-top: .5rem;
+		height: 60px;
+		width: 60px;
+	}
+
 	/* Header Top for Image and Space Repetition */
 	.headerTop {
-		margin-top: 2rem;
+		margin: 1% 5% 1% 5%;
 	}
 	
+	/* Welcome and username */
+	.welcome {
+		font-size: 1rem;
+	}
+
+	.navbar {
+		margin: 2% 0 0 0;
+	}
+
+	/* For Log in, Sign Up and Log out Link */
+	.navblock {
+		font-size: 1.2rem;
+		padding: 1rem 1rem;
+	}
+
+	/* Logout */
+	.navblock-out {
+		font-size: 1.2rem;
+		line-height: 18px;
+	}
+
 	/* Space Repetition title */
 	.space-title {
 		font-size: 2.5rem;
@@ -283,11 +334,43 @@ Label {
 /* min-width 75em = 1200px */
 @media only screen and (min-width: 75em){
 
+	/* Image */
+	img {
+		margin-top: .5rem;
+		height: 60px;
+		width: 60px;
+	}
+
 	/* Header Top for Image and Space Repetition */
 	.headerTop {
-		margin-top: 2rem;
+		margin: 1% 5% 0 5%;
 	}
-		
+	
+	/* Welcome and username */
+	.welcome {
+		font-size: 1rem;
+	}
+
+	.navbar {
+		margin: 2% 0 0 0;
+	}
+
+	/* For Log in, Sign Up and Log out Link */
+	.navblock {
+		font-size: 1.2rem;
+		padding: 1.3rem 1rem;
+	}
+
+	.navblock:first-child {
+		margin-left: 6rem !important;
+	}
+
+	/* Logout */
+	.navblock-out {
+		font-size: 1.2rem;
+		line-height: 18px;
+	}
+
 	/* Space Repetition title */
 	.space-title {
 		font-size: 2.6rem;

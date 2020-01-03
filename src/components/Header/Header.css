@@ -27,8 +27,8 @@ h1 {
 img {
 	display: inline-block;
 	border-radius: 50%;
-	height: 80px;
-	width: 80px;
+	height: 50px;
+	width: 50px;
 	box-shadow: 0 0 20px 5px var(--color-primary-light2);
 	margin: 0 3% 0 0;
 	position: absolute;
@@ -74,7 +74,7 @@ nav {
 	text-transform: uppercase;
 }
 
-.navblock:hover {
+.navblock:hover, .navblock-out:hover {
 	text-shadow: -1px 0 var(--color-primary-light2), 0 2px var(--color-primary-light2), 2px 0 var(--color-primary-light2), 0 -1px var(--color-primary-light2);
 	text-decoration: underline;
 	font-weight: 600;
@@ -83,15 +83,30 @@ nav {
 
 .username {
 	text-transform: uppercase;
-	letter-spacing: 1px;
+	/* letter-spacing: 1px; */
 	font-weight: 900;
+	/* vertical-align: middle; */
 }
 
 .welcome {
-	margin-bottom: 2%;
+	vertical-align: text-bottom;
+	font-size: .8rem;
 }
 
 .space-title {
-	display: inline-block;
+	/* display: inline-block; */
 	font-size: 1.3rem;
+}
+
+.navbar {
+	margin: 2% 0 1% 0 ;
+}
+
+.navblock-out {
+	text-transform: uppercase;
+	text-decoration: none;
+	color: var(--color-border);
+	font-size: 1rem;
+	font-weight: 900;
+	line-height: 14px;
 }
