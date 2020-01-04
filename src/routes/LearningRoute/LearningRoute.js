@@ -41,7 +41,7 @@ export default class LearningRoute extends Component {
 
   submitHandler = ev => {
     ev.preventDefault();
-    const guess = ev.target.guess.value;
+    const guess = ev.target.guess.value.toLowerCase();
     this.setState({ guess })
     LearningApiService.languageGuess(guess)
       .then(res => {
@@ -52,17 +52,6 @@ export default class LearningRoute extends Component {
         });
       })
       .catch(res => this.setState({ error: res.error }))
-
-    //   LearningApiService.getLanguageHead()
-    //   .then(data => {
-    //         this.setState({ 
-    //         orig: data.nextWord,
-    //         correctCount: data.wordCorrectCount,
-    //         incorrectCount: data.wordIncorrectCount,
-    //         totalScore: data.totalScore
-    //   });
-    // })
-    //   .catch(res => this.setState({ error: res.error }))
   }
 
   nextHandler = () => {
@@ -87,9 +76,6 @@ export default class LearningRoute extends Component {
       submitHandler: this.submitHandler,
       nextHandler: this.nextHandler
     }
-
-    // console.log('correct count =>' + this.state.correctCount)
-    // console.log('inCorrect count =>' + this.state.incorrectCount)
 
     return (
       <WordContext.Provider value={value}>

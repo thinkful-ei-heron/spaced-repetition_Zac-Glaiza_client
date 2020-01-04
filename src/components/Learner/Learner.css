@@ -30,7 +30,7 @@
 }
 
 .trans {
-	color: var(--color-red);
+	color: var(--color-green);
 	font-weight: 900;
 	text-transform: capitalize;
 	text-decoration-line: underline;
